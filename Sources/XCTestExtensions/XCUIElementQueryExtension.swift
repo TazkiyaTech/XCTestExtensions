@@ -1,6 +1,6 @@
 //
 //  XCUIElementQueryExtension.swift
-//  HifdhTrackerUITests
+//  XCTestExtensions
 //
 //  Created by Adil Hussain on 19/03/2021.
 //  Copyright © 2021 Tazkiya Tech. All rights reserved.
