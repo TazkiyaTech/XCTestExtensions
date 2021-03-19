@@ -1,3 +1,3 @@
-struct XCTestExtensions {
-    var text = "Hello, World!"
+public struct XCTestExtensions {
+    public var text = "Hello, World!"
 }
