@@ -10,6 +10,9 @@ import XCTest
 
 extension XCUIScreenshotProviding {
     
+    /**
+     * Saves a screenshot of this element's current visual state to the given `XCTActivity` instance.
+     */
     public func saveScreenshot(to activity: XCTActivity, named name: String) {
         let attachment = XCTAttachment(screenshot: screenshot())
         attachment.lifetime = .keepAlways
