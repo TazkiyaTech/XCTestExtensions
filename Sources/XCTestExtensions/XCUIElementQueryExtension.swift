@@ -16,7 +16,7 @@ extension XCUIElementQuery {
      * # Reference
      * [XCUIElementQuery.count](https://developer.apple.com/documentation/xctest/xcuielementquery/1500625-count)
      */
-    public func assertCount(count: Int) {
+    public func assertCount(_ count: Int) {
         XCTAssertEqual(count, self.count)
     }
 }
