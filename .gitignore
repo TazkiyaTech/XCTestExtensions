@@ -1,19 +1,5 @@
-# General folders and files
-/.gradle
-/projectFilesBackup*
-/local.properties
-
-# JetBrains folders and files
-/.idea/*
-!/.idea/codeStyles
-/iOS/.idea/*
-!/iOS/.idea/codeStyles
-*.iml
-
-# Build folders
-/build
-
-# Xcode workspace folders
-xcuserdata
-/Index/
-/Pods/
+.DS_Store
+/.build
+/Packages
+/*.xcodeproj
+xcuserdata/
