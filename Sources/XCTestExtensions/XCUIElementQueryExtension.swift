@@ -17,6 +17,6 @@ extension XCUIElementQuery {
      * [XCUIElementQuery.count](https://developer.apple.com/documentation/xctest/xcuielementquery/1500625-count)
      */
     public func assertCount(equals count: Int) {
-        XCTAssertEqual(count, self.count)
+        XCTAssertEqual(count, self.count, "Expected \(count) elements to match the query but found \(self.count) matches.")
     }
 }

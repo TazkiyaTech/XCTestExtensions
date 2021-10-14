@@ -20,9 +20,9 @@ extension XCUIElement {
      */
     public func assertExistence(timeout: TimeInterval = 0) {
         if (timeout <= 0) {
-            XCTAssertTrue(exists)
+            XCTAssertTrue(exists, "Expected \(self) to exist within the app's UI hierarchy but it does not exist.")
         } else {
-            XCTAssertTrue(waitForExistence(timeout: timeout))
+            XCTAssertTrue(waitForExistence(timeout: timeout), "Waited \(timeout) seconds for \(self) to come into existence but it did not.")
         }
     }
     
@@ -36,9 +36,9 @@ extension XCUIElement {
      */
     public func assertNonExistence(timeout: TimeInterval = 0) {
         if (timeout <= 0) {
-            XCTAssertFalse(exists)
+            XCTAssertFalse(exists, "Expected \(self) not to exist within the app's UI hierarchy but it does exist.")
         } else {
-            XCTAssertTrue(waitForNonExistence(timeout: timeout))
+            XCTAssertTrue(waitForNonExistence(timeout: timeout), "Waited \(timeout) seconds for \(self) to come out of existence but it did not.")
         }
     }
     
