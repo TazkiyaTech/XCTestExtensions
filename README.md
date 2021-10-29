@@ -6,14 +6,14 @@ Swift package containing extension functions for the [XCTest](https://developer.
 
 This Swift package contains the following extension functions:
 
-* [XCUIElementAttributes.assertLabel(contains:)](Sources/XCTestExtensions/XCUIElementAttributesExtension.swift) – Asserts that the receiving element's `label` property contains the given `String` value.
-* [XCUIElementAttributes.assertLabel(equals:)](Sources/XCTestExtensions/XCUIElementAttributesExtension.swift) – Asserts that the receiving element's `label` property equals the given `String` value.
-* [XCUIElement.assertExistence()](Sources/XCTestExtensions/XCUIElementExtension.swift) – Asserts that the receiving element's `exists` property equals `true`.
-* [XCUIElement.assertExistence(timeout:)](Sources/XCTestExtensions/XCUIElementExtension.swift) – Asserts that the receiving element's `exists` property equalled `true` at some point within the given number of seconds.
-* [XCUIElement.assertNonExistence()](Sources/XCTestExtensions/XCUIElementExtension.swift) – Asserts that the receiving element's `exists` property equals `false`.
-* [XCUIElement.assertNonExistence(timeout:)](Sources/XCTestExtensions/XCUIElementExtension.swift) – Asserts that the receiving element's `exists` property equalled `false` at some point within the given number of seconds.
-* [XCUIElementQuery.assertCount(equals:)](Sources/XCTestExtensions/XCUIElementQueryExtension.swift) – Asserts that the receiving element's `count` property equals the given value.
-* [XCUIScreenshotProviding.saveScreenshot(to:named:)](Sources/XCTestExtensions/XCUIScreenshotProvidingExtension.swift) – Saves a screenshot of the receiving element's current visual state to the given `XCTActivity` instance.
+* [XCUIElementAttributes.assertLabel(contains:)](Sources/XCTestExtensions/XCUIElementAttributesExtension.swift)
+* [XCUIElementAttributes.assertLabel(equals:)](Sources/XCTestExtensions/XCUIElementAttributesExtension.swift)
+* [XCUIElement.assertExistence()](Sources/XCTestExtensions/XCUIElementExtension.swift)
+* [XCUIElement.assertExistence(timeout:)](Sources/XCTestExtensions/XCUIElementExtension.swift)
+* [XCUIElement.assertNonExistence()](Sources/XCTestExtensions/XCUIElementExtension.swift)
+* [XCUIElement.assertNonExistence(timeout:)](Sources/XCTestExtensions/XCUIElementExtension.swift)
+* [XCUIElementQuery.assertCount(equals:)](Sources/XCTestExtensions/XCUIElementQueryExtension.swift)
+* [XCUIScreenshotProviding.saveScreenshot(to:named:)](Sources/XCTestExtensions/XCUIScreenshotProvidingExtension.swift)
 
 ## Installation
 
