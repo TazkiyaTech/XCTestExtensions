@@ -13,6 +13,20 @@ extension XCUIElement {
     /**
      * Asserts that this element's `exists` property is `true`.
      *
+     * This is a nicer alternative to writing assertions like the following:
+     *
+     * ```
+     * XCTAssertTrue(myElement.exists)
+     * XCTAssertTrue(myElement.waitForExistence(timeout: 1))
+     * ```
+     *
+     * Instead, you can write assertions like the following:
+     *
+     * ```
+     * myElement.assertExistence()
+     * myElement.assertExistence(timeout: 1)
+     * ```
+     *
      * - Parameter timeout: The maximum amount of time to wait for this element to come into existence.
      *
      * # Reference
@@ -28,6 +42,20 @@ extension XCUIElement {
     
     /**
      * Asserts that this element's `exists` property is `false`.
+     *
+     * This is a nicer alternative to writing assertions like the following:
+     *
+     * ```
+     * XCTAssertFalse(myElement.exists)
+     * XCTAssertTrue(myElement.waitForNonExistence(timeout: 1))
+     * ```
+     *
+     * Instead, you can write assertions like the following:
+     *
+     * ```
+     * myElement.assertNonExistence()
+     * myElement.assertNonExistence(timeout: 1)
+     * ```
      *
      * - Parameter timeout: The maximum amount of time to wait for this element to come out of existence.
      *

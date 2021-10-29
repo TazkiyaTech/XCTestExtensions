@@ -12,6 +12,14 @@ extension XCUIElementAttributes {
     /**
      * Asserts that this element's `label` property contains `expectedLabel`.
      *
+     * This is a nicer alternative to writing:
+     *
+     * ```XCTAssertTrue(myElement.label.contains(expectedLabel))```
+     *
+     *  Instead, you can write:
+     *
+     * ```myElement.assertLabel(contains: expectedLabel)```
+     *
      * - Parameter expectedLabel: The sub-String expected within this element's label.
      *
      * # Reference
@@ -23,6 +31,14 @@ extension XCUIElementAttributes {
     
     /**
      * Asserts that this element's `label` property equals `expectedLabel`.
+     *
+     * This is a nicer alternative to writing:
+     *
+     * ```XCTAssertEqual(myElement.label, expectedLabel)```
+     *
+     * Instead, you can write:
+     *
+     * ```myElement.assertLabel(equals: expectedLabel)```
      *
      * - Parameter expectedLabel: The exact String expected in this element's label.
      *

@@ -11,7 +11,17 @@ import XCTest
 extension XCUIElementQuery {
     
     /**
-     * Asserts that the number of elements that match this query is `count`.
+     * Asserts that the number of elements which match this query equals `count`.
+     *
+     * This is a nicer alternative to writing:
+     *
+     * ```XCTAssertEqual(myElementQuery.count, expectedCount)```
+     *
+     * Instead, you can write:
+     *
+     * ```myElementQuery.assertCount(equals: expectedCount)```
+     *
+     * - Parameter count: The number of elements expected to match this query.
      *
      * # Reference
      * [XCUIElementQuery.count](https://developer.apple.com/documentation/xctest/xcuielementquery/1500625-count)
