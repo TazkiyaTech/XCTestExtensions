@@ -80,7 +80,7 @@ extension XCUIElement {
      *
      * - Parameter numberOfTimes: The number of taps to perform.
      */
-    func tap(numberOfTimes: UInt) {
+    public func tap(numberOfTimes: UInt) {
         (0..<numberOfTimes).forEach { _ in tap() }
     }
     
