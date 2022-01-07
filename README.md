@@ -12,6 +12,7 @@ This Swift package contains the following extension functions:
 * [XCUIElement.assertExistence(timeout:)](Sources/XCTestExtensions/XCUIElementExtension.swift)
 * [XCUIElement.assertNonExistence()](Sources/XCTestExtensions/XCUIElementExtension.swift)
 * [XCUIElement.assertNonExistence(timeout:)](Sources/XCTestExtensions/XCUIElementExtension.swift)
+* [XCUIElement.tap(numberOfTimes:)](Sources/XCTestExtensions/XCUIElementExtension.swift)
 * [XCUIElementQuery.assertCount(equals:)](Sources/XCTestExtensions/XCUIElementQueryExtension.swift)
 * [XCUIScreenshotProviding.saveScreenshot(to:named:)](Sources/XCTestExtensions/XCUIScreenshotProvidingExtension.swift)
 

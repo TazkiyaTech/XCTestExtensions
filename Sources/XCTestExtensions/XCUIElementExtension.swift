@@ -71,6 +71,20 @@ extension XCUIElement {
     }
     
     /**
+     * Performs the specified number of taps on this element.
+     *
+     * This function calls the `XCUIElement.tap()` function the specified number of times.
+     * It contrasts with the `XCUIElement.tap(withNumberOfTaps:numberOfTouches:)` function
+     * in that it gives a little more time between each tap
+     * and therefore increases the chance of the view picking up and processing each tap as a separate tap.
+     *
+     * - Parameter numberOfTimes: The number of taps to perform.
+     */
+    func tap(numberOfTimes: UInt) {
+        (0..<numberOfTimes).forEach { _ in tap() }
+    }
+    
+    /**
      * Waits the specified amount of time for this element’s `exists` property to become `false`.
      *
      * - Parameter timeout: The maximum amount of time to wait.
