@@ -71,6 +71,19 @@ extension XCUIElement {
     }
     
     /**
+     * Sends a tap event to this element via the `XCUIElement.tap()` function if this element is deemed to be hittable.
+     * Otherwise, sends a tap event to this element via the `XCUICoordinate.tap()` function.
+     */
+    func forceTap() {
+        if (isHittable) {
+            tap()
+        } else {
+            let coordinate = coordinate(withNormalizedOffset: CGVector(dx:0.0, dy:0.0))
+            coordinate.tap()
+        }
+    }
+    
+    /**
      * Performs the specified number of taps on this element.
      *
      * This function calls the `XCUIElement.tap()` function the specified number of times.
