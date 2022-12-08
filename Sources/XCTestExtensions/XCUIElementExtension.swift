@@ -74,7 +74,7 @@ extension XCUIElement {
      * Sends a tap event to this element via the `XCUIElement.tap()` function if this element is deemed to be hittable.
      * Otherwise, sends a tap event to this element via the `XCUICoordinate.tap()` function.
      */
-    func forceTap() {
+    public func forceTap() {
         if (isHittable) {
             tap()
         } else {
