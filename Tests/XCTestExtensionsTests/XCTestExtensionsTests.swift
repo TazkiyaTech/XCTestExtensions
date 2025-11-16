@@ -6,8 +6,4 @@ final class XCTestExtensionsTests: XCTestCase {
     func test_example() {
         XCTAssertEqual(2, 1+1)
     }
-
-    static let allTests = [
-        ("test_example", test_example),
-    ]
 }
