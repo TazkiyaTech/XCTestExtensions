@@ -7,7 +7,7 @@ final class XCTestExtensionsTests: XCTestCase {
         XCTAssertEqual(2, 1+1)
     }
 
-    static var allTests = [
+    static let allTests = [
         ("test_example", test_example),
     ]
 }
