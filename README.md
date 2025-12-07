@@ -12,6 +12,7 @@ This Swift package contains the following extension functions:
 | [XCUIElementAttributes.assertLabel(equals:)][XCUIElementAttributesExtension-swift-file]   | Asserts that the UI element's label equals the given text.                                        |
 | [XCUIElement.assertExistence()][XCUIElementExtension-swift-file]                          | Asserts that the UI element exists in the UI hierarchy.                                           |
 | [XCUIElement.assertExistence(timeout:)][XCUIElementExtension-swift-file]                  | Asserts that the UI element appears in the UI hierarchy within the specified amount of time.      |
+| [XCUIElement.assertHittable()][XCUIElementExtension-swift-file]                           | Asserts that the UI element is hittable.                                                          |
 | [XCUIElement.assertNonExistence()][XCUIElementExtension-swift-file]                       | Asserts that the UI element does not exist in the UI hierarchy.                                   |
 | [XCUIElement.assertNonExistence(timeout:)][XCUIElementExtension-swift-file]               | Asserts that the UI element disappears from the UI hierarchy within the specified amount of time. |
 | [XCUIElement.forceTap()][XCUIElementExtension-swift-file]                                 | Sends a tap event to the UI element using one of two strategies, selected automatically.          |

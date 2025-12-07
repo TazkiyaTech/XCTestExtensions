@@ -71,6 +71,28 @@ extension XCUIElement {
     }
     
     /**
+     * Asserts that this element's `isHittable` property is `true`.
+     *
+     * This is a convenience wrapper around:
+     *
+     * ```
+     * XCTAssertTrue(myElement.isHittable)
+     * ```
+     *
+     * Instead of writing the above, you can simply call:
+     *
+     * ```
+     * myElement.assertHittable()
+     * ```
+     *
+     * # Reference
+     * [XCUIElement.isHittable](https://developer.apple.com/documentation/xcuiautomation/xcuielement/ishittable)
+     */
+    public func assertHittable() {
+        XCTAssertTrue(isHittable)
+    }
+    
+    /**
      * Sends a tap event to this element via the `XCUIElement.tap()` function if this element is deemed to be hittable.
      * Otherwise, sends a tap event to this element via the `XCUICoordinate.tap()` function.
      */
