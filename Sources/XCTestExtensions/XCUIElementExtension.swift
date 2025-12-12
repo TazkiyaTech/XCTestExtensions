@@ -13,24 +13,22 @@ extension XCUIElement {
     /**
      * Asserts that this element's `exists` property is `true`.
      *
-     * This is a nicer alternative to writing assertions like the following:
+     * This function provides a convenient alternative to writing:
      *
-     * ```
+     * ```swift
      * XCTAssertTrue(myElement.exists)
      * XCTAssertTrue(myElement.waitForExistence(timeout: 1))
      * ```
      *
-     * Instead, you can write assertions like the following:
+     * Instead, you can simply write:
      *
-     * ```
+     * ```swift
      * myElement.assertExistence()
      * myElement.assertExistence(timeout: 1)
      * ```
      *
      * - Parameter timeout: The maximum amount of time to wait for this element to come into existence.
-     *
-     * # Reference
-     * [XCUIElement.exists](https://developer.apple.com/documentation/xctest/xcuielement/1500760-exists)
+     * - SeeAlso: [XCUIElement.exists](https://developer.apple.com/documentation/xcuiautomation/xcuielement/exists)
      */
     public func assertExistence(timeout: TimeInterval = 0) {
         if (timeout <= 0) {
@@ -43,24 +41,22 @@ extension XCUIElement {
     /**
      * Asserts that this element's `exists` property is `false`.
      *
-     * This is a nicer alternative to writing assertions like the following:
+     * This function provides a convenient alternative to writing:
      *
-     * ```
+     * ```swift
      * XCTAssertFalse(myElement.exists)
      * XCTAssertTrue(myElement.waitForNonExistence(timeout: 1))
      * ```
      *
-     * Instead, you can write assertions like the following:
+     * Instead, you can simply write:
      *
-     * ```
+     * ```swift
      * myElement.assertNonExistence()
      * myElement.assertNonExistence(timeout: 1)
      * ```
      *
      * - Parameter timeout: The maximum amount of time to wait for this element to come out of existence.
-     *
-     * # Reference
-     * [XCUIElement.exists](https://developer.apple.com/documentation/xctest/xcuielement/1500760-exists)
+     * - SeeAlso: [XCUIElement.exists](https://developer.apple.com/documentation/xcuiautomation/xcuielement/exists)
      */
     public func assertNonExistence(timeout: TimeInterval = 0) {
         if (timeout <= 0) {
@@ -73,20 +69,19 @@ extension XCUIElement {
     /**
      * Asserts that this element's `isHittable` property is `true`.
      *
-     * This is a convenience wrapper around:
+     * This function is a convenience wrapper around:
      *
-     * ```
+     * ```swift
      * XCTAssertTrue(myElement.isHittable)
      * ```
      *
      * Instead of writing the above, you can simply call:
      *
-     * ```
+     * ```swift
      * myElement.assertHittable()
      * ```
      *
-     * # Reference
-     * [XCUIElement.isHittable](https://developer.apple.com/documentation/xcuiautomation/xcuielement/ishittable)
+     * - SeeAlso: [XCUIElement.isHittable](https://developer.apple.com/documentation/xcuiautomation/xcuielement/ishittable)
      */
     public func assertHittable() {
         XCTAssertTrue(isHittable)
@@ -95,6 +90,10 @@ extension XCUIElement {
     /**
      * Sends a tap event to this element via the `XCUIElement.tap()` function if this element is deemed to be hittable.
      * Otherwise, sends a tap event to this element via the `XCUICoordinate.tap()` function.
+     *
+     * - SeeAlso:
+     *   - [XCUIElement.tap()](https://developer.apple.com/documentation/xcuiautomation/xcuielement/tap())
+     *   - [XCUICoordinate.tap()](https://developer.apple.com/documentation/xcuiautomation/xcuicoordinate/tap())
      */
     public func forceTap() {
         if (isHittable) {
@@ -114,6 +113,9 @@ extension XCUIElement {
      * and therefore increases the chance of the view picking up and processing each tap as a separate tap.
      *
      * - Parameter numberOfTimes: The number of taps to perform.
+     * - SeeAlso:
+     *   - [XCUIElement.tap()](https://developer.apple.com/documentation/xcuiautomation/xcuielement/tap())
+     *   - [XCUIElement.tap(withNumberOfTaps:numberOfTouches:)](https://developer.apple.com/documentation/xcuiautomation/xcuielement/tap(withnumberoftaps:numberoftouches:))
      */
     public func tap(numberOfTimes: UInt) {
         (0..<numberOfTimes).forEach { _ in tap() }

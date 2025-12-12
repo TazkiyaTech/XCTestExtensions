@@ -11,22 +11,26 @@ import XCTest
 extension XCUIElementQuery {
     
     /**
-     * Asserts that the number of elements which match this query equals `count`.
+     * Asserts that the number of elements matching this query is equal to `expectedCount`.
      *
-     * This is a nicer alternative to writing:
+     * This function allows tests to read more fluently by placing the assertion directly on the query being tested.
      *
-     * ```XCTAssertEqual(myElementQuery.count, expectedCount)```
+     * Instead of writing:
      *
-     * Instead, you can write:
+     * ```swift
+     * XCTAssertEqual(myElementQuery.count, expectedCount)
+     * ```
      *
-     * ```myElementQuery.assertCount(equals: expectedCount)```
+     * you can write:
      *
-     * - Parameter count: The number of elements expected to match this query.
+     * ```swift
+     * myElementQuery.assertCount(equals: expectedCount)
+     * ```
      *
-     * # Reference
-     * [XCUIElementQuery.count](https://developer.apple.com/documentation/xctest/xcuielementquery/1500625-count)
+     * - Parameter expectedCount: The number of elements expected to match this query.
+     * - SeeAlso: [XCUIElementQuery.count](https://developer.apple.com/documentation/xcuiautomation/xcuielementquery/count)
      */
-    public func assertCount(equals count: Int) {
-        XCTAssertEqual(count, self.count, "Expected \(count) elements to match the query but found \(self.count) matches.")
+    public func assertCount(equals expectedCount: Int) {
+        XCTAssertEqual(count, expectedCount, "Expected \(expectedCount) elements to match the query but found \(self.count) matches.")
     }
 }

@@ -12,18 +12,21 @@ extension XCUIElementAttributes {
     /**
      * Asserts that this element's `label` property contains `expectedLabel`.
      *
-     * This is a nicer alternative to writing:
+     * This function is a convenience wrapper around:
      *
-     * ```XCTAssertTrue(myElement.label.contains(expectedLabel))```
+     * ```swift
+     * XCTAssertTrue(myElement.label.contains(expectedLabel))
+     * ```
      *
-     *  Instead, you can write:
+     * Instead of writing the above, you can simply call:
      *
-     * ```myElement.assertLabel(contains: expectedLabel)```
+     * ```swift
+     * myElement.assertLabel(contains: expectedLabel)
+     * ```
      *
      * - Parameter expectedLabel: The sub-String expected within this element's label.
      *
-     * # Reference
-     * [XCUIElementAttributes.label](https://developer.apple.com/documentation/xctest/xcuielementattributes/1500692-label)
+     * - SeeAlso: [XCUIElementAttributes.label](https://developer.apple.com/documentation/xcuiautomation/xcuielementattributes/label)
      */
     public func assertLabel(contains expectedLabel: String) {
         XCTAssertTrue(label.contains(expectedLabel), "Element's label (\"\(label)\") does not contain \"\(expectedLabel)\".")
@@ -32,18 +35,21 @@ extension XCUIElementAttributes {
     /**
      * Asserts that this element's `label` property equals `expectedLabel`.
      *
-     * This is a nicer alternative to writing:
+     * This function is a convenience wrapper around:
      *
-     * ```XCTAssertEqual(myElement.label, expectedLabel)```
+     * ```swift
+     * XCTAssertEqual(myElement.label, expectedLabel)
+     * ```
      *
-     * Instead, you can write:
+     * Instead of writing the above, you can simply call:
      *
-     * ```myElement.assertLabel(equals: expectedLabel)```
+     * ```swift
+     * myElement.assertLabel(equals: expectedLabel)
+     * ```
      *
      * - Parameter expectedLabel: The exact String expected in this element's label.
      *
-     * # Reference
-     * [XCUIElementAttributes.label](https://developer.apple.com/documentation/xctest/xcuielementattributes/1500692-label)
+     * - SeeAlso: [XCUIElementAttributes.label](https://developer.apple.com/documentation/xcuiautomation/xcuielementattributes/label)
      */
     public func assertLabel(equals expectedLabel: String) {
         XCTAssertEqual(expectedLabel, label, "Element's label (\"\(label)\") does not equal \"\(expectedLabel)\".")
