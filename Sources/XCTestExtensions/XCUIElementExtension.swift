@@ -120,24 +120,4 @@ extension XCUIElement {
     public func tap(numberOfTimes: UInt) {
         (0..<numberOfTimes).forEach { _ in tap() }
     }
-    
-    /**
-     * Waits the specified amount of time for this element’s `exists` property to become `false`.
-     *
-     * - Parameter timeout: The maximum amount of time to wait.
-     * - Returns: `false` if the timeout expires without this element coming out of existence.
-     *
-     * # Reference
-     * [XCUIElement.exists](https://developer.apple.com/documentation/xctest/xcuielement/1500760-exists)
-     */
-    public func waitForNonExistence(timeout: TimeInterval) -> Bool {
-        
-        let timeStart = Date().timeIntervalSince1970
-        
-        while (Date().timeIntervalSince1970 <= (timeStart + timeout)) {
-            if !exists { return true }
-        }
-        
-        return false
-    }
 }
